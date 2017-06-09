@@ -15,6 +15,12 @@ int main()
 		li.additem(49);
 		li.additem(64);
 		li.display(); // показываем список
+		linkList* l = new linkList;
+		l->additem(1);
+		l->additem(2);
+		l->display();
+		l->~linkList();
+		l->display();
 	system("pause");
     return 0;
 }

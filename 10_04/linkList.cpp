@@ -4,8 +4,6 @@
 
 using namespace std;
 
-
-
 linkList::linkList()
 {
 	first = NULL;
@@ -32,4 +30,5 @@ void linkList::display()
 
 linkList::~linkList()
 {
+
 }
