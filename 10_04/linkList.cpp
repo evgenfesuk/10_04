@@ -40,7 +40,7 @@ linkList::~linkList()
 		current = current->next; // двигаемся к следующему элементу
 
 		*/
-		link* prev = first->next;
+		/*link* prev = first->next;
 		while (prev)
 		{
 			cout << "deleting adress " << first << " with data " << first->data << endl;
@@ -49,6 +49,17 @@ linkList::~linkList()
 			prev = first->next;
 		}
 		cout << "deleting adress " << first << " with data " << first->data << endl;
-		delete first;
+		delete first;*/
+
+		link* current = first; // установить указатель на
+							  // первый элемент
+		while (current != NULL) // выход по достижении
+								// последнего элемента
+		{
+			link* temp = current; // сохранить указатель на // данный элемент
+			current = current->next; // получить ссылку на
+									 // следующую ссылку
+			delete temp; // удалить эту ссылку
+		}
 	//}
 }
