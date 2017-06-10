@@ -13,5 +13,7 @@ public:
 	~linkList();
 private:
 	link* first;
+	int total;
+	link* current;
 };
 

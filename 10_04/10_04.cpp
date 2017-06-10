@@ -9,17 +9,14 @@ using namespace std;
 
 int main()
 {
-		linkList li; // создаем переменную-список
-		li.additem(25); // добавляем туда несколько чисел
-		li.additem(36);
-		li.additem(49);
-		li.additem(64);
-		li.display(); // показываем список
 		linkList* l = new linkList;
 		l->additem(1);
 		l->additem(2);
+		l->additem(3);
 		l->display();
 		l->~linkList();
+		l->additem(3);
+		l->additem(4);
 		l->display();
 	system("pause");
     return 0;
