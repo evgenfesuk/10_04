@@ -17,7 +17,6 @@ void linkList::additem(int d)
 	newlink->next = first; // запоминаем значение first
 	first = newlink; // first теперь указывает на новый элемент
 	total++;
-
 }
 
 void linkList::display()
@@ -33,11 +32,23 @@ void linkList::display()
 
 linkList::~linkList()
 {
-	current = first; // начинаем с первого элемента
+	/*current = first; // начинаем с первого элемента
 	while (current) // пока есть данные
 	{
-		cout << "deleted adress " << current << " with data " << current->data << endl;
+		
 		delete current;
 		current = current->next; // двигаемся к следующему элементу
-	}
+
+		*/
+		link* prev = first->next;
+		while (prev)
+		{
+			cout << "deleting adress " << first << " with data " << first->data << endl;
+			delete first;
+			first = prev;
+			prev = first->next;
+		}
+		cout << "deleting adress " << first << " with data " << first->data << endl;
+		delete first;
+	//}
 }

@@ -15,9 +15,11 @@ int main()
 		l->additem(3);
 		l->display();
 		l->~linkList();
-		l->additem(3);
-		l->additem(4);
-		l->display();
+		linkList* l2 = new linkList;
+		l2->additem(3);
+		l2->additem(4);
+		l2->display();
+		l2->~linkList();
 	system("pause");
     return 0;
 }
