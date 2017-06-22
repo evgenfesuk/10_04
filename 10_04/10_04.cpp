@@ -18,6 +18,9 @@ int main()
 		linkList* l2 = new linkList;
 		l2->additem(3);
 		l2->additem(4);
+		l2->addItemInvert(2);
+		l2->additem(5);
+		l2->addItemInvert(1);
 		l2->display();
 		l2->~linkList();
 	system("pause");
