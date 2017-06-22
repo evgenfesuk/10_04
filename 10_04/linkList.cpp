@@ -19,6 +19,23 @@ void linkList::additem(int d)
 	total++;
 }
 
+void linkList::addItemInvert(int d)
+{
+	link* tmp = new link; // выделяем память
+
+	tmp = first; // установить указатель на первый элемент
+	while (tmp->next != NULL) // выход по достижении ПРЕДпоследнего элемента
+	{
+			link* temp = tmp; // сохранить указатель на данный элемент (последний или первый добавленный)
+			tmp = tmp->next; // получить ссылку на  следующую ссылку
+	}
+	link* current = new link; // выделяем память
+	current->data = d; // запоминаем данные
+	current->next = NULL; // предыдущего элемента нету
+	tmp->next = current; // запоминаем значение first, тоесть бывшему последнему элементу указываем на новый последний элемент
+	total++;
+}
+
 void linkList::display()
 {
 	current = first; // начинаем с первого элемента

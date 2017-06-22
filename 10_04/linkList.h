@@ -4,6 +4,7 @@ class linkList
 public:
 	linkList();
 	void additem(int d); // добавление элемента
+	void addItemInvert(int d); // добавление элемента в конец списка
 	void display(); // показ данных
 	struct link // один элемент списка
 	{
